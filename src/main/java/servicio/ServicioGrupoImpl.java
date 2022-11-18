@@ -4,7 +4,7 @@
  */
 package servicio;
 
-import Modelo.Profesor;
+import Modelo.Grupo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,32 +12,30 @@ import java.util.List;
  *
  * @author JuanFernandez
  */
-public class ServicioProfesorImpl implements ServicioProfesor{
-    private List<Profesor> profesorList;
+public class ServicioGrupoImpl implements ServicioGrupo{
+    private List<Grupo> grupoList;
 
-    public ServicioProfesorImpl() {
-        this.profesorList= new ArrayList<>();
+    public ServicioGrupoImpl() {
+        this.grupoList= new ArrayList<>();
     }
 
     @Override
-    public void crear(Profesor profesor) {
-        this.profesorList.add(profesor);
+    public void crear(Grupo grupo) {
+        this.grupoList.add(grupo);
     }
 
     @Override
-    public void modificar(int codigo, Profesor profesorModificado) {
+    public void modificar(int codigo, Grupo grupoModificado) {
         
-        
-        this.profesorList.set(codigo, profesorModificado);
-    
+        this.grupoList.set(codigo, grupoModificado);
     }
 
     @Override
     public void eliminar(int codigo) {
         var indice=0;
-        for(var profesor:this.profesorList){
+        for(var profesor:this.grupoList){
             if(profesor.getCodigo()==codigo){
-                this.profesorList.remove(indice);
+                this.grupoList.remove(indice);
                 break;
             }else{
                 indice++;
@@ -46,8 +44,7 @@ public class ServicioProfesorImpl implements ServicioProfesor{
     }
 
     @Override
-    public List<Profesor> listar() {
-        return this.profesorList;
+    public List<Grupo> listar() {
+        return this.grupoList;
     }
-    
 }

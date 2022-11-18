@@ -5,15 +5,15 @@
 package controlador;
 import Modelo.Profesor;
 import java.time.LocalDate;
-import java.time.Month;
+
 import servicio.ServicioProfesorImpl;
 /**
  *
- * @author USUARIO
+ * @author JuanFernandez
  */
 public class ProfesorControl {
     
-     private final ServicioProfesorImpl profesorServiceImpl;
+     public ServicioProfesorImpl profesorServiceImpl;
 
     public ProfesorControl() {
         this.profesorServiceImpl = new ServicioProfesorImpl();

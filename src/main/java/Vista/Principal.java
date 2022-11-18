@@ -7,13 +7,18 @@ package Vista;
 
 import controlador.ProfesorControl;
 
+
+
+
+
 /**
  *
- * @author USUARIO
+ * @author JuanFernandez
  */
 public class Principal {
 
    public static void main(String[] args) {
+      
        var profesorControl=new ProfesorControl();
        var data= new String[7];
        data[0]="90";
@@ -23,14 +28,7 @@ public class Principal {
        data[4]="1998";
        data[5]="06";
        data[6]="22";
-       
-      
        System.out.println(profesorControl.crear(data));
-    
        
-       
-       
-        
-        
     }
 }

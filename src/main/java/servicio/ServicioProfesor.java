@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author USUARIO
+ * @author JuanFernandez
  */
 public interface ServicioProfesor  {
    public abstract void crear(Profesor profesor);

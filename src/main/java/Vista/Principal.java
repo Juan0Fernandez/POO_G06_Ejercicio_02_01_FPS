@@ -5,6 +5,11 @@
 
 package Vista;
 
+import Modelo.Articulo;
+import Modelo.Cliente;
+import Modelo.Factura;
+import Modelo.Grupo;
+import Modelo.Revista;
 import controlador.ProfesorControl;
 
 
@@ -29,6 +34,24 @@ public class Principal {
        data[5]="06";
        data[6]="22";
        System.out.println(profesorControl.crear(data));
+      
+       var articulo1 = new Articulo("tabaco ","El  pepe",1);
+       System.out.println(articulo1);
+       
+       var cliente1 =new Cliente("Jose","0998522545","01021820889",80);
+       System.out.println(cliente1);
+       
+       var factura1 = new Factura("Nutella",85095,"Capulispamba");
+       System.out.println(factura1);
+        
+       var grupo1 = new Grupo("Mario Rizzinni","10",25);
+       System.out.println(grupo1);
+       
+       var revista1 = new Revista("La isla maravillora",420,LocalDate.of(2022,10,24));
+       System.out.println(revista1);
        
     }
+   
+       
+   
 }

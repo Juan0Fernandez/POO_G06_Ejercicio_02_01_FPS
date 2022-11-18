@@ -9,7 +9,7 @@ import servicio.ServicioArticuloImpl;
 
 /**
  *
- * @author JuanFernandez
+ * @author JuanFernández
  */
 public class ArticuloControl {
    public ServicioArticuloImpl articuloServiceImpl;

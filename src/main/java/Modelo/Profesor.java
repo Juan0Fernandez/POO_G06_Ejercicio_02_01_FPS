@@ -11,19 +11,20 @@ import java.time.LocalDate;
  * @author JuanFernandez
  */
 public class Profesor {
-    private int codigo;
+    
     private String nombre;
     private String titulo;
     private LocalDate fechaNacimiento;
     private int estatura;
     private double peso;
+
+    public Profesor(int estatura, String nombre, String titulo, LocalDate fechaNacimiento, double peso) {
        
-    public Profesor(int estatura, String nombre, double peso, String titulo, LocalDate fechaNacimiento){
-        this.nombre=nombre;
-        this.titulo=titulo;
-        this.fechaNacimiento=fechaNacimiento;
-        this.estatura=estatura; 
-        this.peso=peso;
+        this.nombre = nombre;
+        this.titulo = titulo;
+        this.fechaNacimiento = fechaNacimiento;
+        this.estatura = estatura;
+        this.peso = peso;
     }
 
    
@@ -55,6 +56,8 @@ public class Profesor {
         return fechaNacimiento;
     }
 
+   
+
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
@@ -72,6 +75,12 @@ public class Profesor {
         return "Profesor{" + "nombre=" + nombre + ", titulo=" + titulo + ", fechaNacimiento=" + fechaNacimiento + ", estatura=" + estatura + ", peso=" + peso + '}';
     }
 
+    private int codigo;
+
+    public Profesor(int codigo) {
+        this.codigo = codigo;
+    }
+    
     public int getCodigo() {
         
         return codigo;

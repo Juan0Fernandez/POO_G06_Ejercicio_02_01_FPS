@@ -22,18 +22,13 @@ public class ProfesorControl {
     
     public String crear(String [] data){
         var retorno="No se pudo crear el profesor";
-        var estatura=Integer.valueOf(data[0]).intValue();
-        var nombre=Integer.valueOf(data[1]).intValue();
-        var peso=Double.valueOf(data[2]).doubleValue();
-        var titulo=Integer.valueOf(data[3]).doubleValue();
-        var year=Integer.valueOf(data[4]).intValue();
-        var mes=Integer.valueOf(data[5]).intValue();
-        var dia=Integer.valueOf(data[6]).intValue();
+        var estatura=Integer.valueOf(data[0]);
+        var peso=Double.valueOf(data[2]);
         
         if(peso<0 || estatura<0){
             retorno+=" Peso o estatura no son correctas";
         }else{
-            var profesor = new Profesor(90,"luis",81.05,"Ingenirea",LocalDate.of(2022, Month.MARCH, 10));
+            var profesor = new Profesor(170,"luis","Ingeniero",LocalDate.of(2022, 10, 02),71.16);
             this.profesorServiceImpl.crear(profesor);
             retorno= "Profesor "+profesor.getNombre()+" creado correctamente";
         }

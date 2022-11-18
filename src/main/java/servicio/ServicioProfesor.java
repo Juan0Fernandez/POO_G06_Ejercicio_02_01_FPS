@@ -14,7 +14,7 @@ import java.util.List;
 public interface ServicioProfesor  {
    public abstract void crear(Profesor profesor);
 
-    public abstract void modificar(int codigo, Profesor jugadorModificado);
+    public abstract void modificar(int codigo, Profesor profesorModificado);
 
     public abstract void eliminar(int codigo);
 
